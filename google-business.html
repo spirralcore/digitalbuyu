@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Google Business Kurulum — Digital Büyü</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --black:#080808; --white:#fff; --orange:#FF5C00; --text-dim:#888; }
+  body { background:var(--black); color:var(--white); font-family:'Inter',sans-serif; overflow-x:hidden; }
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; background:rgba(8,8,8,0.97); border-bottom:1px solid #111; }
+  .logo { font-size:13px; font-weight:700; letter-spacing:2px; color:var(--white); text-decoration:none; }
+  .logo span { color:var(--orange); }
+  .nav-cta { background:var(--orange); color:var(--white); border:none; padding:10px 18px; font-size:13px; font-weight:700; border-radius:4px; cursor:pointer; text-decoration:none; }
+  .hero { padding:120px 24px 60px; max-width:600px; margin:0 auto; }
+  .breadcrumb { font-size:12px; color:var(--text-dim); margin-bottom:20px; }
+  .breadcrumb a { color:var(--text-dim); text-decoration:none; }
+  .breadcrumb span { color:var(--orange); }
+  .hero-tag { font-size:11px; font-weight:600; letter-spacing:4px; color:#4285F4; text-transform:uppercase; margin-bottom:16px; }
+  .hero-title { font-size:clamp(32px,8vw,56px); font-weight:900; line-height:1.05; letter-spacing:-1px; margin-bottom:20px; }
+  .hero-desc { font-size:16px; color:var(--text-dim); line-height:1.7; margin-bottom:32px; }
+  .price-tag { font-size:36px; font-weight:900; color:var(--orange); margin-bottom:32px; }
+  .btn-primary { background:var(--orange); color:var(--white); border:none; padding:16px 32px; font-size:15px; font-weight:700; border-radius:4px; cursor:pointer; text-decoration:none; display:inline-block; margin-right:12px; margin-bottom:12px; }
+  .btn-ghost { background:transparent; color:var(--text-dim); border:1px solid #333; padding:16px 24px; font-size:15px; border-radius:4px; cursor:pointer; text-decoration:none; display:inline-block; margin-bottom:12px; }
+  .sep { height:1px; background:linear-gradient(to right,transparent,#222,transparent); margin:60px 0; }
+  .section { padding:0 24px 60px; max-width:600px; margin:0 auto; }
+  .section-tag { font-size:10px; font-weight:600; letter-spacing:4px; color:var(--orange); text-transform:uppercase; margin-bottom:12px; }
+  .section-title { font-size:clamp(22px,5vw,32px); font-weight:800; margin-bottom:16px; letter-spacing:-0.5px; }
+  .section-body { font-size:15px; color:var(--text-dim); line-height:1.7; margin-bottom:24px; }
+
+  /* Google Maps Mock */
+  .maps-mock { background:#1a1a1a; border-radius:12px; overflow:hidden; border:1px solid #222; margin-bottom:16px; }
+  .maps-search { background:#2a2a2a; padding:10px 14px; display:flex; align-items:center; gap:10px; }
+  .maps-search-bar { background:#3a3a3a; border-radius:20px; padding:8px 16px; flex:1; font-size:13px; color:#aaa; }
+  .maps-body { padding:16px; }
+  .maps-result { background:#222; border-radius:8px; padding:14px; margin-bottom:10px; display:flex; gap:12px; align-items:flex-start; }
+  .maps-icon { width:36px; height:36px; background:#4285F4; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
+  .maps-name { font-size:14px; font-weight:600; margin-bottom:2px; }
+  .maps-stars { color:#fbbc04; font-size:12px; }
+  .maps-info { font-size:11px; color:#888; margin-top:2px; }
+  .maps-cta-row { display:flex; gap:8px; margin-top:8px; }
+  .maps-cta { background:#2a3a4a; border:1px solid #3a5a7a; border-radius:16px; padding:5px 12px; font-size:11px; color:#7ab3e0; }
+
+  .features { display:flex; flex-direction:column; gap:10px; }
+  .feature { background:#111; border:1px solid #1e1e1e; border-radius:8px; padding:16px; display:flex; gap:14px; }
+  .feature-icon { font-size:22px; flex-shrink:0; }
+  .feature-title { font-size:14px; font-weight:700; margin-bottom:4px; }
+  .feature-body { font-size:13px; color:var(--text-dim); line-height:1.5; }
+
+  .includes { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .include-item { background:#111; border:1px solid #1e1e1e; border-radius:8px; padding:14px; display:flex; align-items:flex-start; gap:10px; }
+  .include-icon { color:#4285F4; font-size:16px; flex-shrink:0; }
+  .include-text strong { color:var(--white); display:block; margin-bottom:2px; font-size:13px; }
+  .include-text { font-size:13px; color:var(--text-dim); }
+
+  .upsell { background:#111; border:1px solid #222; border-radius:12px; padding:24px; }
+  .upsell-title { font-size:16px; font-weight:700; margin-bottom:8px; }
+  .upsell-body { font-size:14px; color:var(--text-dim); line-height:1.6; margin-bottom:16px; }
+  .upsell-link { color:var(--orange); font-size:14px; font-weight:600; text-decoration:none; }
+
+  .add-to-cart { position:sticky; bottom:0; background:rgba(8,8,8,0.97); border-top:1px solid #111; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; z-index:50; }
+  .cart-price { font-size:22px; font-weight:900; color:var(--orange); }
+  .cart-note { font-size:11px; color:var(--text-dim); margin-top:2px; }
+  .cart-btn { background:var(--orange); color:white; border:none; padding:14px 24px; font-size:14px; font-weight:700; border-radius:4px; cursor:pointer; }
+  .cart-btn.added { background:#1a6b4a; }
+  footer { padding:36px 20px 90px; border-top:1px solid #111; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+  footer .logo { font-size:12px; }
+  footer .footer-note { font-size:11px; color:var(--text-dim); }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">DIGITAL <span>BÜYÜ</span></a>
+  <a href="index.html#sepet" class="nav-cta">Sepete Git</a>
+</nav>
+
+<div class="hero">
+  <div class="breadcrumb"><a href="index.html">Ana Sayfa</a> › <span>Google Business</span></div>
+  <p class="hero-tag">Google Business</p>
+  <h1 class="hero-title">Google'da arayınca<br>siz çıkın</h1>
+  <p class="hero-desc">Ücretsiz, güçlü, lokal — haritada yerinizi alın. Müşteriler "yakınımdaki kuaför" diye aradığında siz görünün. Reklam vermeden Google'da öne çıkın.</p>
+  <div class="price-tag">500 TL</div>
+  <a href="#" onclick="addToCart(); return false;" class="btn-primary" id="heroCartBtn">Sepete Ekle</a>
+  <a href="https://wa.me/908502418816?text=Google%20Business%20kurulumu%20hakkında%20bilgi%20almak%20istiyorum." class="btn-ghost">WhatsApp'tan Sor</a>
+</div>
+
+<div class="sep"></div>
+
+<div class="section">
+  <p class="section-tag">Nasıl Görünür</p>
+  <h2 class="section-title">Müşteri sizi Google'da böyle bulur</h2>
+  <div class="maps-mock">
+    <div class="maps-search">
+      <div class="maps-search-bar">🔍 kadıköy kuaför</div>
+    </div>
+    <div class="maps-body">
+      <div class="maps-result">
+        <div class="maps-icon">✂️</div>
+        <div style="flex:1">
+          <div class="maps-name">İşletmenizin Adı</div>
+          <div class="maps-stars">★★★★★ <span style="color:#888;font-size:11px">(24 yorum)</span></div>
+          <div class="maps-info">📍 Kadıköy · ⏰ Açık · 📞 0850 241 88 16</div>
+          <div class="maps-cta-row">
+            <div class="maps-cta">Yol Tarifi</div>
+            <div class="maps-cta">Ara</div>
+            <div class="maps-cta">Web Sitesi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="section-body">Yukarıdaki gibi Google Haritada görünmeye başlarsınız. Tamamen ücretsiz, reklam gerekmez.</p>
+</div>
+
+<div class="sep"></div>
+
+<div class="section">
+  <p class="section-tag">Neden Önemli</p>
+  <h2 class="section-title">Lokal aramalarda görünün</h2>
+  <div class="features">
+    <div class="feature"><div class="feature-icon">📍</div><div><div class="feature-title">Haritada Çıkın</div><div class="feature-body">"Yakınımdaki [sektör]" aramalarında üst sıralarda görünün.</div></div></div>
+    <div class="feature"><div class="feature-icon">⭐</div><div><div class="feature-title">Müşteri Yorumları</div><div class="feature-body">Yorumlar güven oluşturur — yeni müşteriler yorumları okuyarak karar verir.</div></div></div>
+    <div class="feature"><div class="feature-icon">📞</div><div><div class="feature-title">Direkt Arama</div><div class="feature-body">Müşteri Google'dan tek tıkla sizi arar — site bile gerekmez.</div></div></div>
+    <div class="feature"><div class="feature-icon">🆓</div><div><div class="feature-title">Tamamen Ücretsiz</div><div class="feature-body">Google Business Profili açmak ücretsiz — sadece kurulum ücretimiz var.</div></div></div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<div class="section">
+  <p class="section-tag">Ne Dahil</p>
+  <h2 class="section-title">500 TL'ye neler alıyorsunuz?</h2>
+  <div class="includes">
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Profil Açılışı</strong>Google Business kaydı</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Bilgi Girişi</strong>Adres, saat, telefon</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Fotoğraf</strong>5 adet fotoğraf yükleme</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Kategori</strong>Doğru kategori seçimi</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Doğrulama</strong>Google doğrulama süreci</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Optimizasyon</strong>Açıklama & SEO ayarı</div></div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<div class="section">
+  <p class="section-tag">Bir Adım Daha</p>
+  <h2 class="section-title">Google'da reklam da vermek ister misiniz?</h2>
+  <div class="upsell">
+    <p class="upsell-title">Google Ads ile üst sıralara çıkın</p>
+    <p class="upsell-body">Organik görünürlüğün ötesine geçin. Google Ads ile rakiplerinizin önüne geçin, hedef kitlenize direkt ulaşın.</p>
+    <a href="danismanlik.html" class="upsell-link">Reklam yönetimi hakkında bilgi al →</a>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="logo">DIGITAL <span>BÜYÜ</span></a>
+  <p class="footer-note">Yapay zeka destekli dijital büyüme</p>
+</footer>
+
+<div class="add-to-cart">
+  <div>
+    <div class="cart-price">500 TL</div>
+    <div class="cart-note">Google Business kurulum</div>
+  </div>
+  <button class="cart-btn" id="cartBtn" onclick="addToCart()">+ Sepete Ekle</button>
+</div>
+
+<script>
+function addToCart() {
+  let cart = JSON.parse(localStorage.getItem('db_cart') || '[]');
+  const item = { id: 'google', name: 'Google Business Kurulum', price: 500 };
+  if (!cart.find(i => i.id === item.id)) { cart.push(item); localStorage.setItem('db_cart', JSON.stringify(cart)); }
+  document.getElementById('cartBtn').textContent = '✓ Sepette';
+  document.getElementById('cartBtn').classList.add('added');
+  document.getElementById('heroCartBtn').textContent = '✓ Sepette';
+  setTimeout(() => { window.location.href = 'index.html#sepet'; }, 800);
+}
+const cart = JSON.parse(localStorage.getItem('db_cart') || '[]');
+if (cart.find(i => i.id === 'google')) { document.getElementById('cartBtn').textContent = '✓ Sepette'; document.getElementById('cartBtn').classList.add('added'); }
+</script>
+</body>
+</html>

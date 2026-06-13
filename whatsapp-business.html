@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>WhatsApp Business Kurulum — Digital Büyü</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --black:#080808; --white:#fff; --orange:#FF5C00; --green:#25D366; --text-dim:#888; }
+  body { background:var(--black); color:var(--white); font-family:'Inter',sans-serif; overflow-x:hidden; }
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; background:rgba(8,8,8,0.97); border-bottom:1px solid #111; }
+  .logo { font-size:13px; font-weight:700; letter-spacing:2px; color:var(--white); text-decoration:none; }
+  .logo span { color:var(--orange); }
+  .nav-cta { background:var(--orange); color:var(--white); border:none; padding:10px 18px; font-size:13px; font-weight:700; border-radius:4px; cursor:pointer; text-decoration:none; }
+  .hero { padding:120px 24px 60px; max-width:600px; margin:0 auto; }
+  .breadcrumb { font-size:12px; color:var(--text-dim); margin-bottom:20px; }
+  .breadcrumb a { color:var(--text-dim); text-decoration:none; }
+  .breadcrumb span { color:var(--orange); }
+  .hero-tag { font-size:11px; font-weight:600; letter-spacing:4px; color:var(--green); text-transform:uppercase; margin-bottom:16px; }
+  .hero-title { font-size:clamp(32px,8vw,56px); font-weight:900; line-height:1.05; letter-spacing:-1px; margin-bottom:20px; }
+  .hero-desc { font-size:16px; color:var(--text-dim); line-height:1.7; margin-bottom:32px; }
+  .hero-price { display:flex; align-items:center; gap:16px; margin-bottom:32px; flex-wrap:wrap; }
+  .price-tag { font-size:36px; font-weight:900; color:var(--orange); }
+  .btn-primary { background:var(--orange); color:var(--white); border:none; padding:16px 32px; font-size:15px; font-weight:700; border-radius:4px; cursor:pointer; text-decoration:none; display:inline-block; margin-right:12px; margin-bottom:12px; }
+  .btn-ghost { background:transparent; color:var(--text-dim); border:1px solid #333; padding:16px 24px; font-size:15px; border-radius:4px; cursor:pointer; text-decoration:none; display:inline-block; margin-bottom:12px; }
+  .sep { height:1px; background:linear-gradient(to right,transparent,#222,transparent); margin:60px 0; }
+  .section { padding:0 24px 60px; max-width:600px; margin:0 auto; }
+  .section-tag { font-size:10px; font-weight:600; letter-spacing:4px; color:var(--orange); text-transform:uppercase; margin-bottom:12px; }
+  .section-title { font-size:clamp(22px,5vw,32px); font-weight:800; margin-bottom:16px; letter-spacing:-0.5px; }
+  .section-body { font-size:15px; color:var(--text-dim); line-height:1.7; margin-bottom:24px; }
+
+  /* WA Mock */
+  .wa-demo { background:#0b141a; border-radius:16px; overflow:hidden; border:1px solid #1e2d33; margin-bottom:24px; }
+  .wa-header { background:#1f2c33; padding:12px 16px; display:flex; align-items:center; gap:12px; }
+  .wa-avatar { width:36px; height:36px; border-radius:50%; background:var(--green); display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
+  .wa-name { font-size:14px; font-weight:600; }
+  .wa-status { font-size:11px; color:#8696a0; }
+  .wa-messages { padding:16px; display:flex; flex-direction:column; gap:8px; }
+  .wa-msg { max-width:80%; border-radius:8px; padding:10px 12px; font-size:13px; line-height:1.4; }
+  .wa-msg.received { background:#1e2d33; align-self:flex-start; color:#e9edef; }
+  .wa-msg.sent { background:#005c4b; align-self:flex-end; color:#e9edef; }
+  .wa-msg .time { font-size:10px; color:#8696a0; margin-top:4px; text-align:right; }
+  .wa-auto { background:#1e2d33; border-left:3px solid var(--green); padding:12px 16px; margin:0 16px 16px; border-radius:4px; font-size:12px; color:#8696a0; }
+  .wa-auto strong { color:var(--green); display:block; margin-bottom:4px; font-size:11px; letter-spacing:1px; }
+
+  .features { display:flex; flex-direction:column; gap:10px; }
+  .feature { background:#111; border:1px solid #1e1e1e; border-radius:8px; padding:16px; display:flex; gap:14px; align-items:flex-start; }
+  .feature-icon { font-size:22px; flex-shrink:0; }
+  .feature-title { font-size:14px; font-weight:700; margin-bottom:4px; }
+  .feature-body { font-size:13px; color:var(--text-dim); line-height:1.5; }
+
+  .includes { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .include-item { background:#111; border:1px solid #1e1e1e; border-radius:8px; padding:14px; display:flex; align-items:flex-start; gap:10px; }
+  .include-icon { color:var(--green); font-size:16px; flex-shrink:0; margin-top:1px; }
+  .include-text { font-size:13px; color:var(--text-dim); line-height:1.4; }
+  .include-text strong { color:var(--white); display:block; margin-bottom:2px; font-size:13px; }
+
+  .add-to-cart { position:sticky; bottom:0; background:rgba(8,8,8,0.97); border-top:1px solid #111; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; z-index:50; }
+  .cart-price { font-size:22px; font-weight:900; color:var(--orange); }
+  .cart-note { font-size:11px; color:var(--text-dim); margin-top:2px; }
+  .cart-btn { background:var(--orange); color:white; border:none; padding:14px 24px; font-size:14px; font-weight:700; border-radius:4px; cursor:pointer; }
+  .cart-btn.added { background:#1a6b4a; }
+  footer { padding:36px 20px 90px; border-top:1px solid #111; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+  footer .logo { font-size:12px; }
+  footer .footer-note { font-size:11px; color:var(--text-dim); }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">DIGITAL <span>BÜYÜ</span></a>
+  <a href="index.html#sepet" class="nav-cta">Sepete Git</a>
+</nav>
+
+<div class="hero">
+  <div class="breadcrumb"><a href="index.html">Ana Sayfa</a> › <span>WhatsApp Business</span></div>
+  <p class="hero-tag">WhatsApp Business</p>
+  <h1 class="hero-title">Müşteriniz yazar,<br>siz anında karşılarsınız</h1>
+  <p class="hero-desc">7/24 profesyonel görünüm — tek bir kurulumla. Müşterileriniz işletme profilinizi görür, otomatik karşılama mesajı alır, hizmetlerinizi inceler.</p>
+  <div class="hero-price"><div class="price-tag">500 TL</div></div>
+  <a href="#" onclick="addToCart(); return false;" class="btn-primary" id="heroCartBtn">Sepete Ekle</a>
+  <a href="https://wa.me/908502418816?text=WhatsApp%20Business%20kurulumu%20hakkında%20bilgi%20almak%20istiyorum." class="btn-ghost">WhatsApp'tan Sor</a>
+</div>
+
+<div class="sep"></div>
+
+<div class="section">
+  <p class="section-tag">Nasıl Görünür</p>
+  <h2 class="section-title">Müşteriniz bunu görür</h2>
+  <div class="wa-demo">
+    <div class="wa-header">
+      <div class="wa-avatar">🏪</div>
+      <div>
+        <div class="wa-name">İşletmenizin Adı</div>
+        <div class="wa-status">İşletme Hesabı ✓</div>
+      </div>
+    </div>
+    <div class="wa-auto">
+      <strong>OTOMATİK KARŞILAMA</strong>
+      Merhaba! 👋 Digital Büyü'ye hoş geldiniz. En kısa sürede size dönüş yapacağız. Hizmetlerimiz için aşağıdaki menüyü inceleyebilirsiniz.
+    </div>
+    <div class="wa-messages">
+      <div class="wa-msg received">Merhaba, fiyat öğrenebilir miyim?<div class="time">14:23</div></div>
+      <div class="wa-msg sent">Merhaba! 😊 Tabii ki, hangi hizmetimizle ilgileniyorsunuz?<div class="time">14:24 ✓✓</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<div class="section">
+  <p class="section-tag">Özellikler</p>
+  <h2 class="section-title">Normal WhatsApp'tan farkı</h2>
+  <div class="features">
+    <div class="feature"><div class="feature-icon">🏪</div><div><div class="feature-title">İşletme Profili</div><div class="feature-body">Logo, adres, web sitesi, çalışma saatleri — müşteri her şeyi görür.</div></div></div>
+    <div class="feature"><div class="feature-icon">🤖</div><div><div class="feature-title">Otomatik Karşılama</div><div class="feature-body">Mesaj geldiğinde anında otomatik yanıt — 7/24 uyanık.</div></div></div>
+    <div class="feature"><div class="feature-icon">⚡</div><div><div class="feature-title">Hızlı Yanıtlar</div><div class="feature-body">Sık sorulan sorulara kısa komutla cevap — zaman kazanın.</div></div></div>
+    <div class="feature"><div class="feature-icon">📋</div><div><div class="feature-title">Hizmet Kataloğu</div><div class="feature-body">Hizmetleriniz ve fiyatlarınız doğrudan WhatsApp'ta.</div></div></div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<div class="section">
+  <p class="section-tag">Ne Dahil</p>
+  <h2 class="section-title">500 TL'ye neler alıyorsunuz?</h2>
+  <div class="includes">
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Kurulum</strong>WhatsApp Business tam kurulum</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Profil</strong>Logo, bilgiler, saat ayarı</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Oto Mesaj</strong>Karşılama & dışarıda mesajı</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Hızlı Yanıt</strong>5 adet hazır yanıt kurulumu</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Katalog</strong>Hizmet kataloğu oluşturma</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Eğitim</strong>Nasıl kullanacağınızı öğretiyoruz</div></div>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="logo">DIGITAL <span>BÜYÜ</span></a>
+  <p class="footer-note">Yapay zeka destekli dijital büyüme</p>
+</footer>
+
+<div class="add-to-cart">
+  <div>
+    <div class="cart-price">500 TL</div>
+    <div class="cart-note">WhatsApp Business kurulum</div>
+  </div>
+  <button class="cart-btn" id="cartBtn" onclick="addToCart()">+ Sepete Ekle</button>
+</div>
+
+<script>
+function addToCart() {
+  let cart = JSON.parse(localStorage.getItem('db_cart') || '[]');
+  const item = { id: 'whatsapp', name: 'WhatsApp Business Kurulum', price: 500 };
+  if (!cart.find(i => i.id === item.id)) { cart.push(item); localStorage.setItem('db_cart', JSON.stringify(cart)); }
+  document.getElementById('cartBtn').textContent = '✓ Sepette';
+  document.getElementById('cartBtn').classList.add('added');
+  document.getElementById('heroCartBtn').textContent = '✓ Sepette';
+  setTimeout(() => { window.location.href = 'index.html#sepet'; }, 800);
+}
+const cart = JSON.parse(localStorage.getItem('db_cart') || '[]');
+if (cart.find(i => i.id === 'whatsapp')) { document.getElementById('cartBtn').textContent = '✓ Sepette'; document.getElementById('cartBtn').classList.add('added'); }
+</script>
+</body>
+</html>
