@@ -22,7 +22,9 @@
 <meta name="theme-color" content="#080808">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"></noscript>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   :root { --black:#080808; --white:#FFFFFF; --orange:#FF5C00; --dim:#1a1a1a; --muted:#555; --text-dim:#888; }
@@ -178,7 +180,7 @@
   .browser-bar { flex:1; background:white; border-radius:4px; padding:3px 8px; font-size:10px; color:#999; border:1px solid #e0e0e0; }
   .empty-site-content { padding:16px; }
   .empty-hero-mock { background:linear-gradient(135deg,#1a1a2e,#16213e); border-radius:8px; padding:20px; text-align:center; margin-bottom:12px; }
-  .empty-hero-mock h3 { font-size:13px; color:white; margin-bottom:4px; }
+  .empty-hero-mock .mock-title { font-weight:700; font-size:13px; color:white; margin-bottom:4px; }
   .empty-hero-mock p { font-size:10px; color:rgba(255,255,255,0.6); }
   .empty-hero-mock .mock-btn { margin-top:10px; background:#ff5c00; color:white; border:none; padding:7px 14px; border-radius:4px; font-size:10px; cursor:pointer; }
   .analytics-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin-top:10px; }
@@ -434,7 +436,7 @@
     <div class="scene-device reveal">
       <div class="empty-mock">
         <div class="empty-browser"><div class="browser-dots"><div class="browser-dot dot-r"></div><div class="browser-dot dot-y"></div><div class="browser-dot dot-g"></div></div><div class="browser-bar">seninfirmam.com</div></div>
-        <div class="empty-site-content"><div class="empty-hero-mock"><h3>Hoş Geldiniz</h3><p>Kaliteli hizmet, uygun fiyat</p><button class="mock-btn">Bize Ulaşın</button></div><div class="analytics-row"><div class="analytics-card"><div class="a-val zero">0</div><div class="a-label">Bugün</div></div><div class="analytics-card"><div class="a-val zero">0</div><div class="a-label">Bu hafta</div></div><div class="analytics-card"><div class="a-val zero">0</div><div class="a-label">Bu ay</div></div></div></div>
+        <div class="empty-site-content"><div class="empty-hero-mock"><div class="mock-title">Hoş Geldiniz</div><p>Kaliteli hizmet, uygun fiyat</p><button class="mock-btn">Bize Ulaşın</button></div><div class="analytics-row"><div class="analytics-card"><div class="a-val zero">0</div><div class="a-label">Bugün</div></div><div class="analytics-card"><div class="a-val zero">0</div><div class="a-label">Bu hafta</div></div><div class="analytics-card"><div class="a-val zero">0</div><div class="a-label">Bu ay</div></div></div></div>
       </div>
     </div>
     <div class="scene-copy reveal"><div class="sep"></div><p class="big-text">Siten çok güzel duruyor.<br><span class="highlight">Ama gelen giden yok.</span></p><p class="sub-text">Bugün 0 ziyaretçi. Dün de. Geçen hafta da.</p></div>
