@@ -25,7 +25,7 @@
   @font-face { font-family:'Inter'; font-style:normal; font-weight:100 900; font-display:swap; src:url('/fonts/inter-latin.woff2') format('woff2'); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
   @font-face { font-family:'Inter'; font-style:normal; font-weight:100 900; font-display:swap; src:url('/fonts/inter-latin-ext.woff2') format('woff2'); unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1EFF,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
   * { margin:0; padding:0; box-sizing:border-box; }
-  :root { --black:#080808; --white:#FFFFFF; --orange:#FF5C00; --dim:#1a1a1a; --muted:#555; --text-dim:#888; }
+  :root { --black:#080808; --white:#FFFFFF; --orange:#FF5C00; --dim:#1a1a1a; --muted:#8f8f8f; --text-dim:#888; }
   html { scroll-behavior:smooth; }
   body { background:var(--black); color:var(--white); font-family:'Inter',sans-serif; overflow-x:hidden; }
 
@@ -180,7 +180,7 @@
   .empty-hero-mock { background:linear-gradient(135deg,#1a1a2e,#16213e); border-radius:8px; padding:20px; text-align:center; margin-bottom:12px; }
   .empty-hero-mock .mock-title { font-weight:700; font-size:13px; color:white; margin-bottom:4px; }
   .empty-hero-mock p { font-size:10px; color:rgba(255,255,255,0.6); }
-  .empty-hero-mock .mock-btn { margin-top:10px; background:#ff5c00; color:white; border:none; padding:7px 14px; border-radius:4px; font-size:10px; cursor:pointer; }
+  .empty-hero-mock .mock-btn { margin-top:10px; background:#ff5c00; color:#0a0a0a; border:none; padding:7px 14px; border-radius:4px; font-size:10px; cursor:pointer; }
   .analytics-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin-top:10px; }
   .analytics-card { background:#f9f9f9; border:1px solid #eee; border-radius:6px; padding:8px; text-align:center; }
   .analytics-card .a-val { font-size:18px; font-weight:800; color:#111; }
@@ -203,7 +203,7 @@
   .svc-left { display:flex; align-items:center; gap:12px; flex:1; min-width:0; }
   .svc-icon { font-size:24px; flex-shrink:0; }
   .svc-name { font-size:14px; font-weight:700; color:#fff; margin-bottom:3px; }
-  .svc-sub { font-size:11px; color:#666; font-weight:600; line-height:1.4; }
+  .svc-sub { font-size:11px; color:#9a9a9a; font-weight:600; line-height:1.4; }
   .svc-right { display:flex; flex-direction:column; align-items:flex-end; gap:6px; flex-shrink:0; }
   .svc-price { font-size:15px; font-weight:900; color:#FF5C00; white-space:nowrap; }
   .svc-btn { background:#1a1a1a; border:1px solid #333; color:#fff; padding:7px 14px; font-size:12px; font-weight:700; border-radius:4px; cursor:pointer; white-space:nowrap; transition:all 0.2s; }
@@ -234,7 +234,7 @@
   .quiz-dot.done { background:var(--orange); }
   .quiz-nav { display:flex; justify-content:space-between; align-items:center; margin-top:24px; }
   .quiz-back { background:none; border:none; color:var(--text-dim); font-size:14px; cursor:pointer; padding:8px 0; }
-  .quiz-next { background:var(--orange); color:white; border:none; padding:14px 28px; font-size:15px; font-weight:700; border-radius:4px; cursor:pointer; }
+  .quiz-next { background:var(--orange); color:#0a0a0a; border:none; padding:14px 28px; font-size:15px; font-weight:700; border-radius:4px; cursor:pointer; }
   .quiz-result { display:none; text-align:center; padding:20px 0; }
   .quiz-result.show { display:block; }
   .result-title { font-size:24px; font-weight:800; margin-bottom:12px; }
@@ -247,7 +247,7 @@
   .pipeline-steps { display:flex; flex-direction:column; gap:0; margin-bottom:20px; }
   .pipeline-step { display:flex; gap:16px; align-items:flex-start; padding:14px 0; border-bottom:1px solid #141414; }
   .pipeline-step:last-child { border-bottom:none; }
-  .step-num { width:36px; height:36px; border-radius:50%; background:var(--orange); color:white; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; flex-shrink:0; margin-top:2px; }
+  .step-num { width:36px; height:36px; border-radius:50%; background:var(--orange); color:#0a0a0a; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; flex-shrink:0; margin-top:2px; }
   .step-content { flex:1; }
   .step-title { font-size:15px; font-weight:700; margin-bottom:4px; }
   .step-body { font-size:13px; color:var(--text-dim); font-weight:600; line-height:1.5; }
@@ -257,7 +257,7 @@
   .promise-text .orng { color:var(--orange); font-weight:700; }
 
   /* SHARED BUTTONS */
-  .whatsapp-btn { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; background:#25D366; color:white; border:none; padding:18px; font-size:16px; font-weight:700; border-radius:8px; cursor:pointer; margin-bottom:10px; transition:opacity 0.2s; text-decoration:none; }
+  .whatsapp-btn { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; background:#25D366; color:#08301d; border:none; padding:18px; font-size:16px; font-weight:700; border-radius:8px; cursor:pointer; margin-bottom:10px; transition:opacity 0.2s; text-decoration:none; }
   .whatsapp-btn:hover { opacity:0.9; }
   .result-note { font-size:12px; color:var(--muted); font-weight:600; text-align:center; }
 
@@ -272,6 +272,19 @@
   /* REVEAL */
   .reveal { opacity:0; transform:translateY(28px); transition:opacity 0.7s ease,transform 0.7s ease; }
   .reveal.visible { opacity:1; transform:translateY(0); }
+  .faq-section { padding:70px 24px; max-width:640px; margin:0 auto; }
+  .faq-list { display:flex; flex-direction:column; gap:10px; margin-top:26px; }
+  .faq-item { background:#111; border:1px solid #1e1e1e; border-radius:10px; padding:0 18px; }
+  .faq-item summary { cursor:pointer; font-size:15px; font-weight:700; padding:16px 0; list-style:none; position:relative; padding-right:28px; }
+  .faq-item summary::-webkit-details-marker { display:none; }
+  .faq-item summary::after { content:'+'; position:absolute; right:2px; top:50%; transform:translateY(-50%); color:#FF5C00; font-size:20px; font-weight:400; }
+  .faq-item[open] summary::after { content:'2'; }
+  .faq-item p { font-size:14px; color:#9a9a9a; line-height:1.7; padding:0 0 18px; }
+  .faq-more { margin-top:22px; font-size:13px; color:#8f8f8f; text-align:center; }
+  .faq-more a { color:#FF5C00; font-weight:600; text-decoration:none; }
+  .site-links { display:flex; flex-wrap:wrap; gap:12px 20px; padding:26px 20px 0; border-top:1px solid #111; max-width:640px; margin:0 auto; }
+  .site-links a { color:#8f8f8f; font-size:12px; text-decoration:none; }
+  .site-links a:hover { color:#fff; }
 </style>
 <script type="application/ld+json">
 {
@@ -358,6 +371,9 @@
   ]
  }
 }
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Web sitem gerçekten 24 saatte hazır olur mu?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Bilgilerini WhatsApp'tan aldıktan sonra tasarımı aynı gün paylaşıyoruz; onay verirsen siten 24 saat içinde yayında oluyor. Domain, hosting ve SSL kurulumunu da biz yapıyoruz."}}, {"@type": "Question", "name": "Fiyata neler dahil, neler değil?", "acceptedAnswer": {"@type": "Answer", "text": "2.000 TL'ye tasarım, mobil uyum, SEO altyapısı, SSL ve 1 yıl hosting dahil. Domain ücreti ve KDV ayrıdır ve tutarı işe başlamadan önce yazılı olarak bildirilir — faturada sürpriz olmaz."}}, {"@type": "Question", "name": "Tasarımı beğenmezsem ne olur?", "acceptedAnswer": {"@type": "Answer", "text": "Hiçbir şey ödemezsin. Tasarımı görmek tamamen ücretsiz; ödeme yalnızca beğenip onay verdiğinde başlar."}}, {"@type": "Question", "name": "Sonradan değişiklik istersem ücretli mi?", "acceptedAnswer": {"@type": "Answer", "text": "İlk teslim gününde istediğin değişiklikler fiyata dahildir. Sonrasındaki kapsam dışı talepler önce yazılı olarak fiyatlandırılır, onay vermeden yapılmaz."}}, {"@type": "Question", "name": "Sadece web sitesi mi yapıyorsunuz?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. WhatsApp Business, Google Business ve sosyal medya kurulumları sabit fiyatla; e-ticaret, reklam yönetimi, içerik üretimi, oyun geliştirme ve prodüksiyon işleri proje bazlı teklifle yapılır."}}]}
 </script>
 </head>
 <body>
@@ -652,6 +668,27 @@
   <p class="result-note">Hiçbir taahhüt yok. Sadece konuşalım.</p>
 </section>
 
+<section id="sss" class="faq-section">
+  <h2 class="section-title" style="text-align:center;">Sıkça Sorulan Sorular</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Web sitem gerçekten 24 saatte hazır olur mu?</summary><p>Evet. Bilgilerini WhatsApp'tan aldıktan sonra tasarımı aynı gün paylaşıyoruz; onay verirsen siten 24 saat içinde yayında oluyor. Domain, hosting ve SSL kurulumunu da biz yapıyoruz.</p></details>
+    <details class="faq-item"><summary>Fiyata neler dahil, neler değil?</summary><p>2.000 TL'ye tasarım, mobil uyum, SEO altyapısı, SSL ve 1 yıl hosting dahil. Domain ücreti ve KDV ayrıdır ve tutarı işe başlamadan önce yazılı olarak bildirilir — faturada sürpriz olmaz.</p></details>
+    <details class="faq-item"><summary>Tasarımı beğenmezsem ne olur?</summary><p>Hiçbir şey ödemezsin. Tasarımı görmek tamamen ücretsiz; ödeme yalnızca beğenip onay verdiğinde başlar.</p></details>
+    <details class="faq-item"><summary>Sonradan değişiklik istersem ücretli mi?</summary><p>İlk teslim gününde istediğin değişiklikler fiyata dahildir. Sonrasındaki kapsam dışı talepler önce yazılı olarak fiyatlandırılır, onay vermeden yapılmaz.</p></details>
+    <details class="faq-item"><summary>Sadece web sitesi mi yapıyorsunuz?</summary><p>Hayır. WhatsApp Business, Google Business ve sosyal medya kurulumları sabit fiyatla; e-ticaret, reklam yönetimi, içerik üretimi, oyun geliştirme ve prodüksiyon işleri proje bazlı teklifle yapılır.</p></details>
+  </div>
+  <p class="faq-more">Cevabını bulamadın mı? <a href="https://wa.me/908502418816?text=Merhaba%2C%20bir%20sorum%20var.">WhatsApp'tan sor</a> — hemen dönelim.</p>
+</section>
+
+  <div class="site-links">
+    <a href="web-sitesi.html">Web Sitesi</a>
+    <a href="whatsapp-business.html">WhatsApp Business</a>
+    <a href="google-business.html">Google Business</a>
+    <a href="sosyal-medya.html">Sosyal Medya</a>
+    <a href="danismanlik.html">Danışmanlık</a>
+    <a href="fiyatlandirma.html">Fiyatlandırma</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+  </div>
 <footer>
   <img src="logo.webp" width="128" height="128" loading="lazy" alt="digital büyü" style="height:42px;width:auto;"/>
   <p class="footer-note">Yapay zeka destekli dijital büyüme</p>
