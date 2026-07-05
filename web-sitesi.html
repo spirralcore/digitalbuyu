@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web Sitesi Yaptırma — 24 Saatte Teslim, 2.000 TL | Digital Büyü</title>
+<title>Web Sitesi Yaptırma — 24 Saatte Teslim, 3.000 TL | Digital Büyü</title>
 <meta name="description" content="Mobil öncelikli, SEO altyapılı web siteniz 24 saatte yayında. Domain, hosting ve SSL kurulumunu biz yapıyoruz; tasarımı beğenmezseniz ödemezsiniz.">
 <link rel="canonical" href="https://digitalbuyu.com/web-sitesi.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Digital Büyü">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:title" content="Web Sitesi Yaptırma — 24 Saatte Teslim, 2.000 TL | Digital Büyü">
+<meta property="og:title" content="Web Sitesi Yaptırma — 24 Saatte Teslim, 3.000 TL | Digital Büyü">
 <meta property="og:description" content="Mobil öncelikli, SEO altyapılı web siteniz 24 saatte yayında. Domain, hosting ve SSL kurulumunu biz yapıyoruz; tasarımı beğenmezseniz ödemezsiniz.">
 <meta property="og:url" content="https://digitalbuyu.com/web-sitesi.html">
 <meta property="og:image" content="https://digitalbuyu.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Web Sitesi Yaptırma — 24 Saatte Teslim, 2.000 TL | Digital Büyü">
+<meta name="twitter:title" content="Web Sitesi Yaptırma — 24 Saatte Teslim, 3.000 TL | Digital Büyü">
 <meta name="twitter:description" content="Mobil öncelikli, SEO altyapılı web siteniz 24 saatte yayında. Domain, hosting ve SSL kurulumunu biz yapıyoruz; tasarımı beğenmezseniz ödemezsiniz.">
 <meta name="twitter:image" content="https://digitalbuyu.com/og-image.png">
 <meta name="theme-color" content="#080808">
@@ -116,9 +116,9 @@
    },
    "offers": {
     "@type": "Offer",
-    "price": "2000",
+    "price": "3000",
     "priceCurrency": "TRY",
-    "description": "KDV ve varsa domain ücreti hariçtir.",
+    "description": "KDV hariçtir; domain ilk yıl fiyata dahildir.",
     "url": "https://digitalbuyu.com/web-sitesi.html"
    }
   },
@@ -156,7 +156,7 @@
   <h1 class="hero-title">Web Sitesi</h1>
   <p class="hero-desc">Müşterileriniz size kolayca ulaşsın. Dijital dünyada var olmaya adım atın. Yüksek ücretler ödemeden — düşük maliyet, yüksek görünürlük.</p>
   <div class="hero-price">
-    <div class="price-tag">2.000 TL</div>
+    <div class="price-tag">3.000 TL</div>
     <div class="price-note"><strong>Web sitesi tasarımı ücretsiz.</strong><br>Paketi onayladığında başlıyoruz.</div>
   </div>
   <a href="#" onclick="addToCart(); return false;" class="btn-primary" id="heroCartBtn">Sepete Ekle</a>
@@ -180,14 +180,14 @@
 
 <div class="section">
   <p class="section-tag">Ne Dahil</p>
-  <h2 class="section-title">2.000 TL'ye neler alıyorsunuz?</h2>
+  <h2 class="section-title">3.000 TL'ye neler alıyorsunuz?</h2>
   <div class="includes">
     <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Mobil Öncelikli</strong>Telefonda mükemmel görünüm</div></div>
     <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>SEO Altyapısı</strong>Google'da bulunabilirlik</div></div>
     <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>SSL (HTTPS)</strong>Güvenli bağlantı, ücretsiz</div></div>
     <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Hızlı Yükleme</strong>1 saniyeden az açılım</div></div>
     <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>WhatsApp Butonu</strong>Müşteri direkt ulaşır</div></div>
-    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>1 Yıl Hosting</strong>Ekstra ödeme yok</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Domain + 1 Yıl Hosting</strong>İlk yıl bizden, ekstra ödeme yok</div></div>
   </div>
 </div>
 
@@ -250,7 +250,7 @@
 <!-- Sepete Ekle -->
 <div class="add-to-cart">
   <div>
-    <div class="cart-price">2.000 TL</div>
+    <div class="cart-price">3.000 TL</div>
     <div class="cart-note">Web sitesi tasarımı ücretsiz</div>
   </div>
   <button class="cart-btn" id="cartBtn" onclick="addToCart()">+ Sepete Ekle</button>
@@ -259,7 +259,7 @@
 <script>
 function addToCart() {
   let cart = JSON.parse(localStorage.getItem('db_cart') || '[]');
-  const item = { id: 'website', name: 'Web Sitesi', price: 2000 };
+  const item = { id: 'website', name: 'Web Sitesi', price: 3000 };
   if (!cart.find(i => i.id === item.id)) {
     cart.push(item);
     localStorage.setItem('db_cart', JSON.stringify(cart));
