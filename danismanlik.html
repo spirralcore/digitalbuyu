@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proje Bazlı Danışmanlık — E-ticaret, Reklam, İçerik, Oyun | Digital Büyü</title>
+<meta name="description" content="E-ticaret kurulumundan reklam yönetimine, içerik üretiminden oyun ve prodüksiyona proje bazlı dijital danışmanlık. İhtiyacını anlat, aynı gün teklif verelim.">
+<link rel="canonical" href="https://digitalbuyu.com/danismanlik.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Büyü">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Proje Bazlı Danışmanlık — E-ticaret, Reklam, İçerik, Oyun | Digital Büyü">
+<meta property="og:description" content="E-ticaret kurulumundan reklam yönetimine, içerik üretiminden oyun ve prodüksiyona proje bazlı dijital danışmanlık. İhtiyacını anlat, aynı gün teklif verelim.">
+<meta property="og:url" content="https://digitalbuyu.com/danismanlik.html">
+<meta property="og:image" content="https://digitalbuyu.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Proje Bazlı Danışmanlık — E-ticaret, Reklam, İçerik, Oyun | Digital Büyü">
+<meta name="twitter:description" content="E-ticaret kurulumundan reklam yönetimine, içerik üretiminden oyun ve prodüksiyona proje bazlı dijital danışmanlık. İhtiyacını anlat, aynı gün teklif verelim.">
+<meta name="twitter:image" content="https://digitalbuyu.com/og-image.png">
+<meta name="theme-color" content="#080808">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --black:#080808; --white:#fff; --orange:#FF5C00; --text-dim:#888; --dim:#1a1a1a; }
+  body { background:var(--black); color:var(--white); font-family:'Inter',sans-serif; overflow-x:hidden; }
+
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; background:rgba(8,8,8,0.97); border-bottom:1px solid #111; }
+  .logo { font-size:13px; font-weight:700; letter-spacing:2px; color:var(--white); text-decoration:none; }
+  .logo span { color:var(--orange); }
+  .nav-cta { background:var(--orange); color:var(--white); border:none; padding:10px 18px; font-size:13px; font-weight:700; border-radius:4px; cursor:pointer; text-decoration:none; }
+
+  .hero { padding:120px 24px 60px; max-width:600px; margin:0 auto; }
+  .breadcrumb { font-size:12px; color:var(--text-dim); margin-bottom:20px; }
+  .breadcrumb a { color:var(--text-dim); text-decoration:none; }
+  .breadcrumb span { color:var(--orange); }
+  .hero-tag { font-size:11px; font-weight:600; letter-spacing:4px; color:var(--orange); text-transform:uppercase; margin-bottom:16px; }
+  .hero-title { font-size:clamp(32px,8vw,56px); font-weight:900; line-height:1.05; letter-spacing:-1px; margin-bottom:20px; }
+  .hero-desc { font-size:16px; color:var(--text-dim); line-height:1.7; margin-bottom:32px; }
+  .hero-price { display:flex; align-items:center; gap:16px; margin-bottom:32px; flex-wrap:wrap; }
+  .price-tag { font-size:36px; font-weight:900; color:var(--orange); }
+  .price-note { font-size:13px; color:var(--text-dim); line-height:1.5; }
+  .price-note strong { color:var(--white); }
+  .btn-primary { background:var(--orange); color:var(--white); border:none; padding:16px 32px; font-size:15px; font-weight:700; border-radius:4px; cursor:pointer; text-decoration:none; display:inline-block; margin-right:12px; margin-bottom:12px; }
+  .btn-ghost { background:transparent; color:var(--text-dim); border:1px solid #333; padding:16px 24px; font-size:15px; font-weight:400; border-radius:4px; cursor:pointer; text-decoration:none; display:inline-block; margin-bottom:12px; }
+
+  .sep { height:1px; background:linear-gradient(to right,transparent,#222,transparent); margin:60px 0; }
+
+  .section { padding:0 24px 60px; max-width:600px; margin:0 auto; }
+  .section-tag { font-size:10px; font-weight:600; letter-spacing:4px; color:var(--orange); text-transform:uppercase; margin-bottom:12px; }
+  .section-title { font-size:clamp(22px,5vw,32px); font-weight:800; margin-bottom:16px; letter-spacing:-0.5px; }
+  .section-body { font-size:15px; color:var(--text-dim); line-height:1.7; margin-bottom:24px; }
+
+  .steps { display:flex; flex-direction:column; gap:0; }
+  .step { display:flex; gap:16px; padding:20px 0; border-bottom:1px solid #141414; }
+  .step:last-child { border-bottom:none; }
+  .step-num { width:36px; height:36px; border-radius:50%; background:var(--orange); color:white; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; flex-shrink:0; }
+  .step-content { flex:1; }
+  .step-title { font-size:15px; font-weight:700; margin-bottom:4px; }
+  .step-body { font-size:13px; color:var(--text-dim); line-height:1.5; }
+
+  .includes { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .include-item { background:#111; border:1px solid #1e1e1e; border-radius:8px; padding:14px; display:flex; align-items:flex-start; gap:10px; }
+  .include-icon { color:var(--orange); font-size:16px; flex-shrink:0; margin-top:1px; }
+  .include-text { font-size:13px; color:var(--text-dim); line-height:1.4; }
+  .include-text strong { color:var(--white); display:block; margin-bottom:2px; font-size:13px; }
+
+  footer { padding:36px 20px; border-top:1px solid #111; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+  footer .logo { font-size:12px; }
+  footer .footer-note { font-size:11px; color:var(--text-dim); }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Service",
+   "name": "Proje Bazlı Dijital Danışmanlık",
+   "description": "E-ticaret, reklam yönetimi, içerik üretimi, CRM, oyun geliştirme ve prodüksiyon projeleri için danışmanlık.",
+   "url": "https://digitalbuyu.com/danismanlik.html",
+   "provider": {
+    "@id": "https://digitalbuyu.com/#organization"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Türkiye"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Ana Sayfa",
+     "item": "https://digitalbuyu.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Danışmanlık",
+     "item": "https://digitalbuyu.com/danismanlik.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">DIGITAL <span>BÜYÜ</span></a>
+  <a href="index.html#sepet" class="nav-cta">Sepete Git</a>
+</nav>
+
+<div class="hero">
+  <div class="breadcrumb"><a href="index.html">Ana Sayfa</a> › <span>Danışmanlık</span></div>
+  <p class="hero-tag">Hizmet</p>
+  <h1 class="hero-title">Proje Bazlı Danışmanlık</h1>
+  <p class="hero-desc">E-ticaret kurulumundan reklam yönetimine, içerik üretiminden oyun ve prodüksiyona — aklındaki projeyi anlat, nasıl hayata geçireceğimizi birlikte planlayalım.</p>
+  <div class="hero-price">
+    <div class="price-tag">Teklif Al</div>
+    <div class="price-note"><strong>İlk görüşme ücretsiz.</strong><br>Projenin kapsamına göre aynı gün net fiyat veriyoruz.</div>
+  </div>
+  <a href="https://wa.me/908502418816?text=Proje%20Bazl%C4%B1%20Dan%C4%B1%C5%9Fmanl%C4%B1k%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="btn-primary">WhatsApp'tan Teklif Al</a>
+  <a href="index.html#sepet" class="btn-ghost">Diğer Hizmetler</a>
+</div>
+
+<div class="sep"></div>
+
+<div class="section">
+  <p class="section-tag">Neler Yapıyoruz</p>
+  <h2 class="section-title">Dijitalde ihtiyacın ne varsa</h2>
+  <div class="includes">
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>E-ticaret</strong>Kendi kanalından satış: sepet, ödeme, ürün yönetimi</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Reklam Yönetimi</strong>Google ve sosyal medya reklamları</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>İçerik Üretimi</strong>Görsel, video ve metin içerikleri</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Prodüksiyon</strong>Tanıtım videosu ve kurumsal çekimler</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>Oyun & Uygulama</strong>Mobil oyun ve uygulama geliştirme</div></div>
+    <div class="include-item"><div class="include-icon">✓</div><div class="include-text"><strong>CRM & Otomasyon</strong>Müşteri takibi ve iş akışı otomasyonu</div></div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<div class="section">
+  <p class="section-tag">Nasıl Çalışır</p>
+  <h2 class="section-title">3 adımda net teklif</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-content"><div class="step-title">WhatsApp'tan projeni anlat</div><div class="step-body">Ne yapmak istediğini kısaca yaz — detayları görüşmede netleştiririz.</div></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-content"><div class="step-title">Ücretsiz görüşme yapalım</div><div class="step-body">Kapsamı, süreyi ve bütçeyi birlikte belirleyelim. Taahhüt yok.</div></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-content"><div class="step-title">Aynı gün net teklif</div><div class="step-body">Fiyat, teslim tarihi ve neler dahil — hepsi yazılı olarak elinde.</div></div></div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<div class="section" style="text-align:center;">
+  <h2 class="section-title">Aklında bir proje mi var?</h2>
+  <p class="section-body">İlk görüşme ücretsiz. Hiçbir taahhüt yok, sadece konuşalım.</p>
+  <a href="https://wa.me/908502418816?text=Proje%20Bazl%C4%B1%20Dan%C4%B1%C5%9Fmanl%C4%B1k%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" class="btn-primary">WhatsApp'tan Yaz</a>
+</div>
+
+<footer>
+  <a href="index.html" class="logo">DIGITAL <span>BÜYÜ</span></a>
+  <p class="footer-note">Yapay zeka destekli dijital büyüme</p>
+</footer>
+
+</body>
+</html>
