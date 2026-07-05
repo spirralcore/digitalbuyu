@@ -97,6 +97,20 @@
   .site-links { display:flex; flex-wrap:wrap; gap:12px 20px; padding:26px 20px 0; border-top:1px solid #111; max-width:640px; margin:0 auto; }
   .site-links a { color:#8f8f8f; font-size:12px; text-decoration:none; }
   .site-links a:hover { color:#fff; }
+  /* TASARIM ORNEKLERI VITRINI */
+    .showcase-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:34px; }
+  .demo-card { display:block; background:#111; border:1px solid #1e1e1e; border-radius:12px; overflow:hidden; text-decoration:none; transition:transform .25s, border-color .25s; }
+  .demo-card:hover { transform:translateY(-5px); border-color:var(--accent, var(--orange)); }
+  .browser-bar { display:flex; align-items:center; gap:6px; padding:10px 12px; background:#181818; border-bottom:1px solid #222; }
+  .browser-bar i { width:9px; height:9px; border-radius:50%; background:#333; }
+  .browser-bar i:nth-child(1){ background:#e5534b; } .browser-bar i:nth-child(2){ background:#e0a63b; } .browser-bar i:nth-child(3){ background:#43a45f; }
+  .browser-url { flex:1; margin-left:8px; background:#101010; border:1px solid #222; border-radius:100px; padding:4px 12px; font-size:10px; color:#8f8f8f; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .demo-shot { display:block; width:100%; aspect-ratio:800/538; object-fit:cover; }
+  .demo-meta { padding:14px 16px 16px; display:flex; justify-content:space-between; align-items:center; gap:10px; }
+  .demo-name { font-size:14px; font-weight:700; color:#fff; }
+  .demo-sector { font-size:11px; color:#8f8f8f; margin-top:3px; }
+  .demo-go { font-size:12px; font-weight:700; color:var(--accent, var(--orange)); white-space:nowrap; }
+  .showcase-note { text-align:center; margin-top:24px; font-size:13px; color:#8f8f8f; }
 </style>
 <script type="application/ld+json">
 {
@@ -198,17 +212,17 @@
   <h2 class="section-title">Sektörünüze özel tasarımlar</h2>
   <p class="section-body">Aşağıdaki örnekler canlı — tıklayın, telefonunuzda da deneyin.</p>
   <div class="examples">
-    <a href="https://kuaforluna.netlify.app/" target="_blank" rel="noopener" class="example-card">
+    <a href="https://kuaforluna.netlify.app/" target="_blank" rel="noopener" class="example-card" style="flex-direction:column;align-items:stretch;padding:0;overflow:hidden;--accent:#e8a7bb;"><span class="browser-bar"><i></i><i></i><i></i><span class="browser-url">kuaforluna.netlify.app</span></span><img class="demo-shot" src="demo-salonluna.webp" width="800" height="538" loading="lazy" alt="Salon Luna kuaför sitesi tasarım örneği"><span style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;">
       <div><div class="example-label">✂️ Kuaför & Güzellik</div><div class="example-sub">Salon Luna — randevu, hizmetler, galeri</div></div>
-      <div class="example-arrow">→</div>
+      <div class="example-arrow">→</div></span>
     </a>
-    <a href="https://yeniyolgayrimenkul.netlify.app/" target="_blank" rel="noopener" class="example-card">
+    <a href="https://yeniyolgayrimenkul.netlify.app/" target="_blank" rel="noopener" class="example-card" style="flex-direction:column;align-items:stretch;padding:0;overflow:hidden;--accent:#e2b23c;"><span class="browser-bar"><i></i><i></i><i></i><span class="browser-url">yeniyolgayrimenkul.netlify.app</span></span><img class="demo-shot" src="demo-yeniyol.webp" width="800" height="538" loading="lazy" alt="Yeni Yol gayrimenkul sitesi tasarım örneği"><span style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;">
       <div><div class="example-label">🏠 Emlak & Gayrimenkul</div><div class="example-sub">Yeni Yol — ilanlar, süreç, değerleme</div></div>
-      <div class="example-arrow">→</div>
+      <div class="example-arrow">→</div></span>
     </a>
-    <a href="https://lezzetdurak.netlify.app/" target="_blank" rel="noopener" class="example-card">
+    <a href="https://lezzetdurak.netlify.app/" target="_blank" rel="noopener" class="example-card" style="flex-direction:column;align-items:stretch;padding:0;overflow:hidden;--accent:#ff5a2c;"><span class="browser-bar"><i></i><i></i><i></i><span class="browser-url">lezzetdurak.netlify.app</span></span><img class="demo-shot" src="demo-lezzetduragi.webp" width="800" height="538" loading="lazy" alt="Lezzet Durağı restoran sitesi tasarım örneği"><span style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;">
       <div><div class="example-label">🍽️ Restoran & Kafe</div><div class="example-sub">Lezzet Durağı — menü, rezervasyon</div></div>
-      <div class="example-arrow">→</div>
+      <div class="example-arrow">→</div></span>
     </a>
   </div>
   <p class="section-body" style="margin-top:18px;font-size:13px;">Sektörünüz burada yok mu? Sorun değil — tasarımı işinize özel sıfırdan yapıyoruz.</p>

@@ -285,6 +285,21 @@
   .site-links { display:flex; flex-wrap:wrap; gap:12px 20px; padding:26px 20px 0; border-top:1px solid #111; max-width:640px; margin:0 auto; }
   .site-links a { color:#8f8f8f; font-size:12px; text-decoration:none; }
   .site-links a:hover { color:#fff; }
+  /* TASARIM ORNEKLERI VITRINI */
+  .showcase { padding:70px 24px; max-width:1000px; margin:0 auto; }
+  .showcase-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:34px; }
+  .demo-card { display:block; background:#111; border:1px solid #1e1e1e; border-radius:12px; overflow:hidden; text-decoration:none; transition:transform .25s, border-color .25s; }
+  .demo-card:hover { transform:translateY(-5px); border-color:var(--accent, var(--orange)); }
+  .browser-bar { display:flex; align-items:center; gap:6px; padding:10px 12px; background:#181818; border-bottom:1px solid #222; }
+  .browser-bar i { width:9px; height:9px; border-radius:50%; background:#333; }
+  .browser-bar i:nth-child(1){ background:#e5534b; } .browser-bar i:nth-child(2){ background:#e0a63b; } .browser-bar i:nth-child(3){ background:#43a45f; }
+  .browser-url { flex:1; margin-left:8px; background:#101010; border:1px solid #222; border-radius:100px; padding:4px 12px; font-size:10px; color:#8f8f8f; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .demo-shot { display:block; width:100%; aspect-ratio:800/538; object-fit:cover; }
+  .demo-meta { padding:14px 16px 16px; display:flex; justify-content:space-between; align-items:center; gap:10px; }
+  .demo-name { font-size:14px; font-weight:700; color:#fff; }
+  .demo-sector { font-size:11px; color:#8f8f8f; margin-top:3px; }
+  .demo-go { font-size:12px; font-weight:700; color:var(--accent, var(--orange)); white-space:nowrap; }
+  .showcase-note { text-align:center; margin-top:24px; font-size:13px; color:#8f8f8f; }
 </style>
 <script type="application/ld+json">
 {
@@ -649,6 +664,29 @@
 <div class="section-divider"></div>
 
 <!-- PIPELINE -->
+<section class="showcase" id="ornekler">
+  <h2 class="section-title" style="text-align:center;">Tasarım Örnekleri</h2>
+  <p style="text-align:center;color:#8f8f8f;font-size:14px;max-width:440px;margin:10px auto 0;line-height:1.7;">Siteniz nasıl görünebilir? Üç farklı sektör için hazırladığımız canlı örnekleri gezin — telefonunuzda da deneyin.</p>
+  <div class="showcase-grid">
+    <a class="demo-card" style="--accent:#e8a7bb;" href="https://kuaforluna.netlify.app/" target="_blank" rel="noopener">
+      <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">kuaforluna.netlify.app</span></div>
+      <img class="demo-shot" src="demo-salonluna.webp" width="800" height="538" loading="lazy" alt="Salon Luna kuaför sitesi tasarım örneği">
+      <div class="demo-meta"><div><div class="demo-name">Salon Luna</div><div class="demo-sector">Kuaför & Güzellik</div></div><span class="demo-go">Canlı Gör →</span></div>
+    </a>
+    <a class="demo-card" style="--accent:#e2b23c;" href="https://yeniyolgayrimenkul.netlify.app/" target="_blank" rel="noopener">
+      <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">yeniyolgayrimenkul.netlify.app</span></div>
+      <img class="demo-shot" src="demo-yeniyol.webp" width="800" height="538" loading="lazy" alt="Yeni Yol gayrimenkul sitesi tasarım örneği">
+      <div class="demo-meta"><div><div class="demo-name">Yeni Yol</div><div class="demo-sector">Emlak & Gayrimenkul</div></div><span class="demo-go">Canlı Gör →</span></div>
+    </a>
+    <a class="demo-card" style="--accent:#ff5a2c;" href="https://lezzetdurak.netlify.app/" target="_blank" rel="noopener">
+      <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">lezzetdurak.netlify.app</span></div>
+      <img class="demo-shot" src="demo-lezzetduragi.webp" width="800" height="538" loading="lazy" alt="Lezzet Durağı restoran sitesi tasarım örneği">
+      <div class="demo-meta"><div><div class="demo-name">Lezzet Durağı</div><div class="demo-sector">Restoran & Kafe</div></div><span class="demo-go">Canlı Gör →</span></div>
+    </a>
+  </div>
+  <p class="showcase-note">Sektörünüz farklı mı? Tasarımı işinize özel sıfırdan yapıyoruz — <a href="https://wa.me/908502418816?text=Merhaba%2C%20sekt%C3%B6r%C3%BCm%20i%C3%A7in%20%C3%B6rnek%20g%C3%B6rmek%20istiyorum." style="color:#FF5C00;font-weight:600;text-decoration:none;">WhatsApp'tan sorun</a>.</p>
+</section>
+
 <section class="section-wrap" id="pipeline">
   <h2 class="section-title">24 Saatte Siten Hazır</h2>
   <p class="section-sub">Sitenin tasarımını aynı gün bitirip paylaşıyoruz. Beğenirsen aynı gün istediğin değişikliklerle tamamlıyoruz.</p>
