@@ -2,6 +2,18 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2FXLMHQR0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Q2FXLMHQR0');
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href*="wa.me"]');
+    if(a){ gtag('event', 'whatsapp_click', {link_url: a.href, link_text: a.textContent.trim()}); }
+  });
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fiyatlandırma — Sürpriz Yok, Her Şey Şeffaf | Digital Büyü</title>
 <meta name="description" content="Web sitesi 3.000 TL (ilk yıl domain dahil), WhatsApp Business 959 TL, Google Business 879 TL, sosyal medya paketi 1.390 TL. KDV ve ek talepler baştan yazılı — sürpriz fatura yok.">
