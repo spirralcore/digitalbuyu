@@ -313,8 +313,7 @@
   .demo-sector { font-size:11px; color:#8f8f8f; margin-top:3px; }
   .demo-go { font-size:12px; font-weight:700; color:var(--accent, var(--orange)); white-space:nowrap; }
   .showcase-note { text-align:center; margin-top:24px; font-size:13px; color:#8f8f8f; }
-  /* GERCEK MUSTERI ISLERI: demolardan ayri tutulur, iki kart ortali */
-  .isler-grid { grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),420px)); justify-content:center; }
+  /* Gercek musteri islerini demolardan ayiran etiket */
   .is-etiket { display:inline-block; font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); border:1px solid var(--accent); border-radius:100px; padding:2px 8px; margin-top:6px; }
   .bolge-links { display:flex; flex-wrap:wrap; gap:8px 10px; padding:14px 20px 0; max-width:640px; margin:0 auto; font-size:12px; color:#8f8f8f; }
   .bolge-links a { color:#8f8f8f; text-decoration:none; }
@@ -688,31 +687,21 @@
 
 <div class="section-divider"></div>
 
-<!-- GERCEK MUSTERI ISLERI (demolar degil; "Tasarim Ornekleri" ayri bolumde kalir) -->
-<section class="showcase" id="isler">
-  <h2 class="section-title" style="text-align:center;">Yaptığımız Siteler</h2>
-  <p style="text-align:center;color:#8f8f8f;font-size:14px;max-width:460px;margin:10px auto 0;line-height:1.7;">Müşterilerimiz için kurduğumuz, şu an yayında olan siteler.</p>
-  <div class="showcase-grid isler-grid">
+<!-- PIPELINE -->
+<section class="showcase" id="ornekler">
+  <h2 class="section-title" style="text-align:center;">Tasarım Örnekleri</h2>
+  <p style="text-align:center;color:#8f8f8f;font-size:14px;max-width:440px;margin:10px auto 0;line-height:1.7;">Siteniz nasıl görünebilir? Müşterilerimiz için yaptığımız siteleri ve farklı sektörler için hazırladığımız örnekleri gezin — telefonunuzda da deneyin.</p>
+  <div class="showcase-grid">
     <a class="demo-card" style="--accent:#EB5A33;" href="https://mofixer.com/" target="_blank" rel="noopener">
       <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">mofixer.com</span></div>
       <img class="demo-shot" src="is-mofixer.webp" width="800" height="538" loading="lazy" alt="Mofixer mobilya montaj ve tamir sitesi ana sayfası">
-      <div class="demo-meta"><div><div class="demo-name">Mofixer</div><div class="demo-sector">Mobilya Montaj & Tamir · 4 il, 350+ sayfa</div><span class="is-etiket">Müşteri Projesi</span></div><span class="demo-go">Siteyi Gör →</span></div>
+      <div class="demo-meta"><div><div class="demo-name">Mofixer</div><div class="demo-sector">Mobilya Montaj & Tamir</div><span class="is-etiket">Müşteri Projesi</span></div><span class="demo-go">Canlı Gör →</span></div>
     </a>
     <a class="demo-card" style="--accent:#D08A4C;" href="https://standyap.com/" target="_blank" rel="noopener">
       <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">standyap.com</span></div>
       <img class="demo-shot" src="is-standyap.webp" width="800" height="538" loading="lazy" alt="Standyap fuar standı tasarım ve kurulum sitesi ana sayfası">
-      <div class="demo-meta"><div><div class="demo-name">Standyap</div><div class="demo-sector">Fuar Standı Tasarım & Kurulum</div><span class="is-etiket">Müşteri Projesi</span></div><span class="demo-go">Siteyi Gör →</span></div>
+      <div class="demo-meta"><div><div class="demo-name">Standyap</div><div class="demo-sector">Fuar Standı Tasarım & Kurulum</div><span class="is-etiket">Müşteri Projesi</span></div><span class="demo-go">Canlı Gör →</span></div>
     </a>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- PIPELINE -->
-<section class="showcase" id="ornekler">
-  <h2 class="section-title" style="text-align:center;">Tasarım Örnekleri</h2>
-  <p style="text-align:center;color:#8f8f8f;font-size:14px;max-width:440px;margin:10px auto 0;line-height:1.7;">Siteniz nasıl görünebilir? Üç farklı sektör için hazırladığımız canlı örnekleri gezin — telefonunuzda da deneyin.</p>
-  <div class="showcase-grid">
     <a class="demo-card" style="--accent:#e8a7bb;" href="https://kuaforluna.netlify.app/" target="_blank" rel="noopener">
       <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">kuaforluna.netlify.app</span></div>
       <img class="demo-shot" src="demo-salonluna.webp" width="800" height="538" loading="lazy" alt="Salon Luna kuaför sitesi tasarım örneği">
